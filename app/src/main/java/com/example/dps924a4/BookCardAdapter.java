@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.TasksViewHolder> {
+public class BookCardAdapter extends RecyclerView.Adapter<BookCardAdapter.TasksViewHolder> {
     interface booksClickListener{
         void bookClicked(Book book);
     }
@@ -22,7 +22,7 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.TasksViewHol
     private final Context mCtx;
     public List<Book> bookList;
 
-    public BooksAdapter(Context mCtx, List<Book> bookList) {
+    public BookCardAdapter(Context mCtx, List<Book> bookList) {
         this.mCtx = mCtx;
         this.bookList = bookList;
         this.listener = (MainActivity)mCtx;
@@ -31,14 +31,13 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.TasksViewHol
     @NonNull
     @Override
     public TasksViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mCtx).inflate(R.layout.recyclerview_books, parent, false);
+        View view = LayoutInflater.from(mCtx).inflate(R.layout.recyclerview_books_card, parent, false);
         return new TasksViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BooksAdapter.TasksViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BookCardAdapter.TasksViewHolder holder, int position) {
         Book book = bookList.get(position);
-        holder.bookTextView.setText(book.getTitle());
         Picasso.get().load(book.getImageURL()).into(holder.bookImageView);
     }
 
@@ -48,11 +47,9 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.TasksViewHol
     }
 
     class TasksViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView bookTextView;
         ImageView bookImageView;
         public TasksViewHolder(View itemView) {
             super(itemView);
-            bookTextView = itemView.findViewById(R.id.book_title);
             bookImageView = itemView.findViewById(R.id.book_thumbnail);
             itemView.setOnClickListener(this);
         }

@@ -5,6 +5,10 @@
         android:id="@+id/nav_search"
         android:icon="@drawable/ic_search"
         android:title="@string/search"
-        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/nav_saved"
+        android:icon="@drawable/ic_saved"
+        android:title="@string/saved"
         app:showAsAction="ifRoom|withText"/>
 </menu>

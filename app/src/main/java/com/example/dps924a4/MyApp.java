@@ -2,9 +2,13 @@ package com.example.dps924a4;
 
 import android.app.Application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyApp extends Application {
     private final NetworkingService networkingService = new NetworkingService();
     private final JsonService jsonService = new JsonService();
+    BookDBService dbService = new BookDBService();
 
     public NetworkingService getNetworkingService() {
         return networkingService;

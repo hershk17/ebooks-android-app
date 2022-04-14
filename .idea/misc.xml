@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1405" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.132" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/drawable/ic_search.xml" value="0.132" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/activity_book_details.xml" value="0.25" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/activity_saved_books.xml" value="0.25" />
+        <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/activity_search_books.xml" value="0.25" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/recyclerview_books.xml" value="0.25" />
+        <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/layout/recyclerview_books_card.xml" value="0.25" />
         <entry key="..\:/Users/hersh/Documents/Projects/DPS924A4/app/src/main/res/menu/nav_menu.xml" value="0.25" />
       </map>
     </option>

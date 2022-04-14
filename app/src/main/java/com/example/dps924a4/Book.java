@@ -3,7 +3,15 @@ package com.example.dps924a4;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
+
+@Entity
 public class Book implements Parcelable {
+    @PrimaryKey
+    @NonNull
     private String id;
     private String title;
     private String[] authors;
