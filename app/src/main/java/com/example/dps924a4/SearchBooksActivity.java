@@ -1,5 +1,6 @@
 package com.example.dps924a4;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +21,7 @@ public class SearchBooksActivity extends AppCompatActivity
     JsonService jsonService;
     BookDBService dbService;
     Intent intent;
+    ArrayList<Book> searchResults = new ArrayList<>(0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,13 @@ public class SearchBooksActivity extends AppCompatActivity
         adapter = new BookAdapter(this, new ArrayList<>(0));
         recyclerView.setAdapter(adapter);
 
-        SearchView searchView = (SearchView) findViewById(R.id.search_bar);
+        if (savedInstanceState != null) {
+            searchResults = savedInstanceState.getParcelableArrayList("results");
+            adapter.bookList = searchResults;
+            recyclerView.setAdapter(adapter);
+        }
+
+        SearchView searchView = findViewById(R.id.search_bar);
         String searchFor = searchView.getQuery().toString();
         if (!searchFor.isEmpty()) {
             searchView.setIconified(false);
@@ -51,6 +59,7 @@ public class SearchBooksActivity extends AppCompatActivity
             @Override
             public boolean onQueryTextSubmit(String query) {
                 networkingManager.searchBooks(query);
+                searchView.clearFocus();
                 return true;
             }
             @Override
@@ -61,8 +70,15 @@ public class SearchBooksActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("results", searchResults);
+    }
+
+    @Override
     public void dataListener(String jsonString, String type) {
-        adapter.bookList = jsonService.getBooksFromJSON(jsonString);
+        searchResults = jsonService.getBooksFromJSON(jsonString);
+        adapter.bookList = searchResults;
         recyclerView.setAdapter(adapter);
     }
 

@@ -21,11 +21,9 @@ public class Book implements Parcelable {
     private int pageCount;
     private String[] categories;
     private int averageRating;
-    private int ratingCount;
     private String maturityRating;
     private String imageURL;
     private String language;
-    private String link;
 
     public Book() {
         id = "";
@@ -37,11 +35,9 @@ public class Book implements Parcelable {
         pageCount = -1;
         categories = new String[0];
         averageRating = -1;
-        ratingCount = -1;
         maturityRating = "";
         imageURL = "";
         language = "";
-        link = "";
     }
 
     protected Book(Parcel in) {
@@ -54,11 +50,9 @@ public class Book implements Parcelable {
         pageCount = in.readInt();
         categories = in.createStringArray();
         averageRating = in.readInt();
-        ratingCount = in.readInt();
         maturityRating = in.readString();
         imageURL = in.readString();
         language = in.readString();
-        link = in.readString();
     }
 
     @Override
@@ -89,11 +83,9 @@ public class Book implements Parcelable {
         parcel.writeInt(pageCount);
         parcel.writeStringArray(categories);
         parcel.writeInt(averageRating);
-        parcel.writeInt(ratingCount);
         parcel.writeString(maturityRating);
         parcel.writeString(imageURL);
         parcel.writeString(language);
-        parcel.writeString(link);
     }
 
     public String getId() {
@@ -168,14 +160,6 @@ public class Book implements Parcelable {
         this.averageRating = averageRating;
     }
 
-    public int getRatingCount() {
-        return ratingCount;
-    }
-
-    public void setRatingCount(int ratingCount) {
-        this.ratingCount = ratingCount;
-    }
-
     public String getMaturityRating() {
         return maturityRating;
     }
@@ -198,13 +182,5 @@ public class Book implements Parcelable {
 
     public void setLanguage(String language) {
         this.language = language;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 }

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_medium">20sp</dimen>
-    <dimen name="text_large">32sp</dimen>
+    <dimen name="text_semilarge">24sp</dimen>
+    <dimen name="text_large">26sp</dimen>
+    <dimen name="text_larger">28sp</dimen>
+    <dimen name="text_largest">32sp</dimen>
+    <dimen name="height_tall">200dp</dimen>
+    <dimen name="width_wide">135dp</dimen>
+    <dimen name="height_med">150dp</dimen>
+    <dimen name="width_med">100dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_med">8dp</dimen>
+    <dimen name="margin_large">15dp</dimen>
+    <dimen name="corner_med">5dp</dimen>
+    <dimen name="elevation_med">10dp</dimen>
 </resources>

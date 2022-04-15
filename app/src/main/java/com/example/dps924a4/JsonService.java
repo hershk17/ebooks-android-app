@@ -39,9 +39,6 @@ public class JsonService {
                 if (volumeInfo.has("averageRating")) {
                     book.setAverageRating(volumeInfo.getInt("averageRating"));
                 }
-                if (volumeInfo.has("ratingCount")) {
-                    book.setRatingCount(volumeInfo.getInt("ratingCount"));
-                }
                 if (volumeInfo.has("maturityRating")) {
                     book.setMaturityRating(volumeInfo.getString("maturityRating"));
                 }
@@ -50,9 +47,6 @@ public class JsonService {
                 }
                 if (volumeInfo.has("language")) {
                     book.setLanguage(volumeInfo.getString("language"));
-                }
-                if (volumeInfo.has("canonicalVolumeLink")) {
-                    book.setLink(volumeInfo.getString("canonicalVolumeLink"));
                 }
                 books.add(book);
             }

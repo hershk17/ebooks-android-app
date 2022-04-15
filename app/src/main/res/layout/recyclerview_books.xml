@@ -10,12 +10,17 @@
         <ImageView
             android:id="@+id/book_thumbnail"
             android:layout_width="wrap_content"
+            android:minHeight="@dimen/height_med"
+            android:minWidth="@dimen/width_med"
+            android:layout_margin="@dimen/margin_med"
+            android:scaleType="centerCrop"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/book_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/text_medium">
+            android:layout_margin="@dimen/margin_small"
+            android:textSize="@dimen/text_semilarge">
         </TextView>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

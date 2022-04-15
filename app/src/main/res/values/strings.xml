@@ -8,4 +8,8 @@
     <string name="romance">Romance</string>
     <string name="fantasy">Fantasy</string>
     <string name="saved">Saved</string>
+    <string name="book_cover">Book Cover</string>
+    <string name="about">About</string>
+    <string name="publication">Publication</string>
+    <string name="other">Other</string>
 </resources>

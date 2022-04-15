@@ -23,11 +23,10 @@ public class BookDBService {
     ExecutorService dbExecutor = Executors.newFixedThreadPool(4);
     Handler dbHandler = new Handler(Looper.getMainLooper());
 
-    public BookDB getInstance(Context context){
+    public void getInstance(Context context){
         if (db == null) {
             db = Room.databaseBuilder(context.getApplicationContext(), BookDB.class, "owners_cars_db").build();
         }
-        return db;
     }
 
     public void insertBook(Book book){

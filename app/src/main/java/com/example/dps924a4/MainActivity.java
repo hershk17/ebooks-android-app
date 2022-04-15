@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         networkingManager = ((MyApp)getApplication()).getNetworkingService();
         jsonService = ((MyApp)getApplication()).getJsonService();
         networkingManager.listener = this;
-        setTitle("eBooks");
+        setTitle("eBooks App");
 
         dbService = ((MyApp)getApplication()).dbService;
         dbService.getInstance(this);

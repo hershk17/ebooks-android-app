@@ -14,7 +14,10 @@
         <TextView
             android:id="@+id/title_fiction"
             android:text="@string/fiction"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_largest"
+            android:layout_marginStart="@dimen/margin_med"
+            android:layout_marginTop="@dimen/margin_med"
+            android:layout_marginBottom="@dimen/margin_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -25,7 +28,10 @@
         <TextView
             android:id="@+id/title_mystery"
             android:text="@string/mystery"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_largest"
+            android:layout_marginStart="@dimen/margin_med"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -36,7 +42,10 @@
         <TextView
             android:id="@+id/title_romance"
             android:text="@string/romance"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_largest"
+            android:layout_marginStart="@dimen/margin_med"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -47,7 +56,10 @@
         <TextView
             android:id="@+id/title_fantasy"
             android:text="@string/fantasy"
-            android:textSize="@dimen/text_large"
+            android:textSize="@dimen/text_largest"
+            android:layout_marginStart="@dimen/margin_med"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView

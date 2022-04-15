@@ -8,7 +8,9 @@ import java.util.List;
 public class MyApp extends Application {
     private final NetworkingService networkingService = new NetworkingService();
     private final JsonService jsonService = new JsonService();
+
     BookDBService dbService = new BookDBService();
+    boolean viewingSavedBook = false;
 
     public NetworkingService getNetworkingService() {
         return networkingService;
